@@ -1,0 +1,67 @@
+\newpage
+\ThisCenterWallPaper{1}{images/info_bg.png}
+\newgeometry{top=0.05in,bottom=0.05in,left=0.05in,right=0.05in}
+\begin{landscape}
+    \begin{textblock*}{5cm}(0.5in,0.3in)
+        \sffamily \fontsize{0.5in}{0.5in} \selectfont {\color{TransparentGray}  { \passportUserNumber }}
+     \end{textblock*}
+    \begin{minipage}{0.2\linewidth}
+        \color{Blue}
+        \vspace{0.2in}
+        \sffamily \fontsize{8}{8}\selectfont {
+            \begin{center}
+                PASSPORT \\
+                \fontsize{5}{5}\selectfont {PASSEPORT / PASAPORTE}
+            \end{center}
+        }
+        \includegraphics[width=\linewidth]{images/trans.png}
+        \begin{adjustwidth}{-0.1in}{}
+            \fbox{\includegraphics[width=1\linewidth]{images/profile.png}}
+        \end{adjustwidth}
+    \end{minipage}
+    \hspace{0.05\linewidth}
+    \begin{minipage}{0.7\linewidth}
+        \begin{table}[H]
+            \centering
+            \passporttextprompt
+            \color{Blue}
+            \begin{tabular}{ccc}
+                \multicolumn{3}{c}{\rmfamily \fontsize{12}{12}\selectfont \bf{THE NATION OF TRANSGENDERS}}\\
+                & \vspace{0.1in} & \\
+                Type/Type/Tipo & Code/Code/Código & Passport No./No. du Passeport/No. de Pasaporte \\
+                \fontsize{7}{7}\selectfont T & \fontsize{7}{7}\selectfont TRANS & \passporttextprinted \passportcolorblack{\passportUserNumber}
+            \end{tabular}
+        \end{table}
+        \passporttextprompt \passportcolorblue{Surname/Nom/Apellidos}\\
+        \passporttextprinted \passportUserFirstName \\
+        \passporttextprompt \passportcolorblue{Given names/Prénoms/Nombres}\\
+        \passporttextprinted \passportUserLastName
+        \begin{adjustwidth}{+0.2in}{}
+        \vspace{0.05in}
+        \passporttextprompt \passportcolorblue{Nationality/Nationalité/Nacionalidad}\\
+        \passporttextpromptlarge \passportcolorblue{THE NATION OF TRANSGENDERS}\\
+        \passporttextprompt \passportcolorblue{Date of birth/Date de naissance/Fecha de nacimiento}\\
+        \passporttextprinted \passportUserBirth \\
+        \passporttextprompt \passportcolorblue{Sex/Sexe/Sexo}\\
+        \passporttextprinted \passportUserSex \\
+        \passporttextprompt \passportcolorblue{Date of issue/Date de délivrance/Fecha de expedición}\\
+        \passporttextprinted \passportUserIssue\\
+        \passporttextprompt \passportcolorblue{Date of expiration/Date d'expiration/Fecha de caduciadad}\\
+        \passporttextprinted \passportUserExpire\\
+        \passporttextprompt \passportcolorblue{Authority/Autorité/Autoridad}\\
+        \passporttextpromptlarge \passportcolorblue{NATIONAL DEPARTMENT OF STATE}
+        \end{adjustwidth}
+    \end{minipage}
+    \begin{figure}[H]
+        \begin{center}
+            \begin{BVerbatim}[fontsize=\large,commandchars=\\\{\}]
+\passportUserCodeRowOne
+            \end{BVerbatim}
+            \vspace{0.1in}
+            \begin{BVerbatim}[fontsize=\large,commandchars=\\\{\}]
+\passportUserCodeRowTwo
+            \end{BVerbatim}
+        \end{center}
+    \end{figure}
+\end{landscape}
+\restoregeometry

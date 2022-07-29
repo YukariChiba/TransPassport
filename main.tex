@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[TU]{fontenc}
+\usepackage{transparent}
+\usepackage{fancyvrb}
+\usepackage{lscape}
+\usepackage{changepage}
+\usepackage{float}
+\usepackage{wallpaper}
+\usepackage{pagecolor}
+\usepackage{afterpage}
+\usepackage{inconsolata}
+\usepackage{fontspec}
+\usepackage{pgffor}
+\usepackage[paperwidth=3.465in,paperheight=4.921in]{geometry}
+\begin{document}
+\pagenumbering{gobble}
+\include{macros.tex}
+\include{cover_front.tex}
+\include{intro.tex}
+\include{info.tex}
+\pagenumbering{arabic}
+\foreach \n in {1,...,12}{\include{visa.tex}}
+\foreach \m in {1,...,6}{\include{endorsement.tex}}
+\pagenumbering{gobble}
+\include{cover_back_in.tex}
+\end{document}
