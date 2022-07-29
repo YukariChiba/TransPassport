@@ -1,16 +1,25 @@
 \newpage
 \ThisCenterWallPaper{1}{images/visa_bg.png}
-\newgeometry{top=0.4in,bottom=0.5in,left=0.5in,right=0.5in}
+\newgeometry{top=0.3in,bottom=0.5in,left=0.5in,right=0.5in}
 \thispagestyle{empty}
 \color{Blue}
 \begin{center}
     \bf{
         \Large Visas
     }
+    \vspace{0.15in}
+    \hrule
 \end{center}
 \begin{textblock*}{3.465in}(0in,4.5in)
     \centering
     \LARGE
     -\space{\bf\thepage}\space-
 \end{textblock*}
+% Define your stamps here!
+\ifnum\passportShowStamps=1
+    \ifnum\thepage=1
+    \includegraphics[width=0.35\linewidth,angle=15]{images/demo_stamps/SMHC.png}
+    \includegraphics[width=0.5\linewidth,angle=30]{images/demo_stamps/SCMH.png}
+    \fi
+\fi
 \restoregeometry
