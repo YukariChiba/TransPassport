@@ -1,25 +1,33 @@
 \newpage
 \ThisCenterWallPaper{1}{images/info_bg.png}
-\newgeometry{top=0.05in,bottom=0.05in,left=0.05in,right=0.05in}
+\newgeometry{top=0.2in,bottom=0.05in,left=0.05in,right=0.05in}
 \begin{landscape}
-    \begin{textblock*}{5cm}(0.5in,0.3in)
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[xshift=3.9in,yshift=-3.9in,opacity=0.5] at (current page.north east){
+            \includegraphics[width=0.4in]{images/profile.png}
+        };
+    \end{tikzpicture}
+    \begin{textblock*}{5cm}(0.6in,0.3in)
         \sffamily \fontsize{0.5in}{0.5in} \selectfont {\color{TransparentGray}  { \passportUserNumber }}
      \end{textblock*}
-    \begin{minipage}{0.2\linewidth}
+    \begin{minipage}{0.3\linewidth}
         \color{Blue}
         \vspace{0.2in}
         \sffamily \fontsize{8}{8}\selectfont {
             \begin{center}
                 PASSPORT \\
-                \fontsize{5}{5}\selectfont {PASSEPORT / PASAPORTE}
+                \passporttextprompt {PASSEPORT / PASAPORTE}
             \end{center}
         }
-        \includegraphics[width=\linewidth]{images/trans.png}
-        \begin{adjustwidth}{-0.1in}{}
-            \fbox{\includegraphics[width=1\linewidth]{images/profile.png}}
+        \begin{center}
+        \includegraphics[width=0.5\linewidth]{images/trans.png}
+        \vspace{0.1in}
+        \begin{adjustwidth}{0.2in}{}
+            \fbox{\includegraphics[width=0.9\linewidth]{images/profile.png}}
         \end{adjustwidth}
+        \end{center}
     \end{minipage}
-    \hspace{0.05\linewidth}
+    %\hspace{0.05\linewidth}
     \begin{minipage}{0.7\linewidth}
         \begin{table}[H]
             \centering
@@ -29,7 +37,7 @@
                 \multicolumn{3}{c}{\rmfamily \fontsize{12}{12}\selectfont \bf{THE NATION OF TRANSGENDERS}}\\
                 & \vspace{0.1in} & \\
                 Type/Type/Tipo & Code/Code/Código & Passport No./No. du Passeport/No. de Pasaporte \\
-                \fontsize{7}{7}\selectfont \passportUserType & \fontsize{7}{7}\selectfont TRANS & \passporttextprinted \passportcolorblack{\passportUserNumber}
+                \passporttextpromptlarge \passportUserType & \passporttextpromptlarge TRANS & \passporttextprinted \passportcolorblack{\passportUserNumber}
             \end{tabular}
         \end{table}
         \passporttextprompt \passportcolorblue{Surname/Nom/Apellidos}\\

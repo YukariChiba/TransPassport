@@ -1,6 +1,6 @@
 \newpage
 \ThisCenterWallPaper{1}{images/visa_bg.png}
-\newgeometry{top=0.3in,bottom=0.5in,left=0.5in,right=0.5in}
+\newgeometry{top=0.3in,bottom=0.5in,left=0.2in,right=0.2in}
 \thispagestyle{empty}
 \color{Blue}
 \begin{center}
@@ -9,7 +9,13 @@
     }
     \vspace{0.15in}
     \hrule
+    \vspace{0.3in}
 \end{center}
+\resizebox{\linewidth}{!}{
+\begin{tikzpicture}
+    \draw[step=3.2in,color=Blue,loosely dotted] (-1,-1) grid (1,1);
+\end{tikzpicture}
+}
 \begin{textblock*}{3.465in}(0in,4.5in)
     \centering
     \LARGE
@@ -18,8 +24,12 @@
 % Define your stamps here!
 \ifnum\passportShowStamps=1
     \ifnum\thepage=1
-    \includegraphics[width=0.35\linewidth,angle=15]{images/demo_stamps/SMHC.png}
-    \includegraphics[width=0.5\linewidth,angle=30]{images/demo_stamps/SCMH.png}
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=0in,yshift=1in] at (current page.center){
+        \includegraphics[width=0.35\linewidth,angle=15]{images/demo_stamps/SMHC.png}
+        \includegraphics[width=0.5\linewidth,angle=30]{images/demo_stamps/SCMH.png}
+    };
+    \end{tikzpicture}
     \fi
 \fi
 \restoregeometry
